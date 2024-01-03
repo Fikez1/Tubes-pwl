@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\cabangshelf;
 class Cabang extends Model
 {
     use HasFactory;
-    
+    protected $table = 'Cabang';
     public function cabangshelf(): BelongsTo
     {
         return $this->belongsTo(Cabangshelf::class);

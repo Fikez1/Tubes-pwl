@@ -9,8 +9,10 @@ class CabangController extends Controller
 {
     public function index()
     {
-        $data['cabang'] = Cabang::with('CabangController')->get();
-        return view('cabang.index', $data);
+        // Anggap Anda ingin mengambil semua data Cabang dari database
+        $cabangs = Cabang::all();
+
+        // Melewatkan $cabangs ke tampilan
+        return view('cabang.index', compact('cabangs'));
     }
 }
-
