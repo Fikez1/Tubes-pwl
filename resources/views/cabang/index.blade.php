@@ -11,7 +11,9 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
 
                     <!--CONTENT HERE-->
-
+                    <x-primary-button tag="a" href="{{
+                        route('cabang.create')}}">Tambah Data Barang</x-primary-button>
+                        <br/>
                     <x-table>
                         <x-slot name="hearder">
                             <tr>
@@ -21,7 +23,6 @@
                                 <th>nama_cabang</th>
                                 <th>alamat</th>
                                 <th>telepon</th>
-                                <th>pegawai</th>
                             </tr>
                         </x-slot>
                         @php $num=1;

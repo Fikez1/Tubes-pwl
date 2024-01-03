@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CabangController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/cabangs', [CabangController::class,'index'])->name('cabang');
+   // Route::get('/cabang/create', [CabangController::class,'create'])->name('cabang.crate');
+    //Route::post('/cabangs', [CabangController::class,'store'])->name('cabang.store');
+
 });
 
 require __DIR__.'/auth.php';
