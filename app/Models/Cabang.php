@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Cabangshelf as ModelsCabangshelf;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,7 +14,7 @@ class Cabang extends Model
     protected $table = 'Cabang';
     public function cabangshelf(): BelongsTo
     {
-        return $this->belongsTo(Cabangshelf::class);
+        return $this->belongsTo(ModelsCabangshelf::class);
     }
     protected $fillable =[
         "Kota",

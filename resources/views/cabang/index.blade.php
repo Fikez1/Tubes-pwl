@@ -18,15 +18,18 @@
                     <x-table>
                         <x-slot name="header">
                             <tr>
-                                <th>pegawai</th>
-                                <th>created_at</th>
-                                <th>updated_at</th>
+                                <th>AKSI</th>
+            
+                                <th>NamaToko</th>
+                                <th>NamaBarang</th>
+                                <th>StokBarang</th>
                                 <th>Image</th>
                                 <th>Quantity</th>
                                 <th>Cabang Shelf</th>
                             </tr>
                         </x-slot>
                         
+                        @php $num=1; @endphp
                         @foreach($cabangs as $cabang)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
@@ -42,7 +45,10 @@
                                 </td>
                                 <td>{{ $cabang->quantity }}</td>
                                 <td>{{ $cabang->cabangshelf->code }}-{{ $cabang->cabangshelf->name }}</td>
-                            </tr> 
+                                <x-primary-button tag="a" href="{{
+                                    route('cabang.edit', $cabang->id)}}">Edit</x-primary-button>
+                            </td>
+                        </tr>
                         @endforeach
                     </x-table>
                     <!-- AKHIR KONTEN -->

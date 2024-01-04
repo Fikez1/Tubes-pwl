@@ -34,6 +34,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/cabangs', [CabangController::class,'index'])->name('cabang');
     Route::get('/cabang/create', [CabangController::class,'create'])->name('cabang.crate');
     Route::post('/cabangs', [CabangController::class,'store'])->name('cabang.store');
+    Route::get('/cabang/{id}/edit', [CabangController::class,'edit'])->name('cabang.edit');
+    Route::match(['put', 'patch'], '/cabangs/{id}',
+    [CabangController::class, 'update'])->name('cabang.update');
 
 });
 
