@@ -2,18 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\Cabangshelf;
+use App\Models\Tokoshelf;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CabangshelfSeeder extends Seeder
+class TokoshelfSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $user = Cabangshelf::insert([
+        $user = Tokoshelf::insert([
             [
                 'id' => '1',
                 'code' => '620',

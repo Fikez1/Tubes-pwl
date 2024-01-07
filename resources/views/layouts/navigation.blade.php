@@ -12,27 +12,9 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('cabang')" :active="request()->routeIs('cabang')">
-                        {{ __('cabang') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('cabang')" :active="request()->routeIs('cabang')">
-                        {{ __('Stok Barang') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('cabang')" :active="request()->routeIs('cabang')">
-                        {{ __('Pegawai') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('cabang')" :active="request()->routeIs('cabang')">
-                        {{ __('Transaksi') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('cabang')" :active="request()->routeIs('cabang')">
-                        {{ __('Detail Transaksi') }}
-                    </x-nav-link>
-                    
-                    <x-nav-link :href="route('cabang')" :active="request()->routeIs('cabang')">
-                        {{ __('Barang') }}
-                    </x-nav-link>
-                    
-                    
+                    <x-nav-link :href="route('toko')" :active="request()->routeIs('toko')">
+                        {{ __('toko') }}
+                    </x-nav-link>    
                 </div>
             </div>
 

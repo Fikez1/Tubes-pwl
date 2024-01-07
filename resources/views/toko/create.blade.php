@@ -1,10 +1,10 @@
 <!-- CONTENT HERE -->
-<form method="post" action="{{ route('cabang.store') }}" enctype="multipart/form-data" class="mt-6 space-y-6">
+<form method="post" action="{{ route('toko.store') }}" enctype="multipart/form-data" class="mt-6 space-y-6">
     @csrf
     <div class="max-w-xl">
-        <x-input-label for="cabang" value="NamaTokoCabang"/>
-        <x-text-input id="cabang" type="" name="title" class="mt-1 block w-full" value="{{ old('cabang')}}" required/>
-        <x-input-error class="mt-2" :messages="$errors->get('cabang')" />
+        <x-input-label for="toko" value="NamaTokoCabang"/>
+        <x-text-input id="toko" type="" name="title" class="mt-1 block w-full" value="{{ old('cabang')}}" required/>
+        <x-input-error class="mt-2" :messages="$errors->get('toko')" />
     </div>
 
     <div class="max-w-xl">
@@ -32,11 +32,11 @@
     </div>
 
     <div class="max-w-xl">
-        <x-input-label for="cabangshelf" value="cabangtoko"/>
-        <x-select-input id="cabangshelf" name="cabangshelf_id" class="mt-1 block w-full" required>
+        <x-input-label for="tokoshelf" value="tokotoko"/>
+        <x-select-input id="tokoshelf" name="tokoshelf_id" class="mt-1 block w-full" required>
             <option value="">Open this select menu</option> 
-            @foreach ( $cabangshelfs as $key => $value )
-            @if(old ('cabangshelf_id') == $key)
+            @foreach ( $tokoshelfs as $key => $value )
+            @if(old ('tokoshelf_id') == $key)
             <option value="{{ $key }}" selected>{{
                 $value }}</option>
                 @else
@@ -59,6 +59,3 @@
     </form>
                 
             @endforeach
-
-
-    

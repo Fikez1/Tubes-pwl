@@ -12,40 +12,38 @@
 
                     <!--CONTENT HERE-->
                     <x-primary-button tag="a" href="{{
-                        route('cabang')}}">Tambah Data Barang</x-primary-button>
+                        route('toko')}}">Tambah Data Barang</x-primary-button>
                         <br/>
                     <!-- KONTEN DISINI -->
                     <x-table>
                         <x-slot name="header">
                             <tr>
-                                <th>AKSI</th>
-            
-                                <th>NamaToko</th>
-                                <th>NamaBarang</th>
-                                <th>StokBarang</th>
-                                <th>Image</th>
-                                <th>Quantity</th>
-                                <th>Cabang Shelf</th>
+                                <th>#</th>
+                                <th>cabang 1. </th>
+                                <th>cabang 2. </th>
+                                <th>cabang 3. </th>
+                                <th>cabang 4. </th>
+                                <th>cabang 5. </th>
                             </tr>
                         </x-slot>
                         
                         @php $num=1; @endphp
-                        @foreach($cabangs as $cabang)
+                        @foreach($tokos as $toko)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $cabang->id_cabang }}</td>
-                                <td>{{ $cabang->nama_cabang }}</td>
-                                <td>{{ $cabang->alamat }}</td>
-                                <td>{{ $cabang->telepon }}</td>
-                                <td>{{ $cabang->created_at }}</td>
-                                <td>{{ $cabang->updated_at }}</td>
+                                <td>{{ $toko->id_toko }}</td>
+                                <td>{{ $toko->nama_toko }}</td>
+                                <td>{{ $toko->alamat }}</td>
+                                <td>{{ $toko->telepon }}</td>
+                                <td>{{ $toko->created_at }}</td>
+                                <td>{{ $toko->updated_at }}</td>
                                 <td>
-                                    <img src="{{ asset('storage/Cabang/'.$cabang->toko) }}" width="100px" alt="Branch Image"/>
+                                    <img src="{{ asset('storage/Toko/'.$toko->cabang) }}" width="100px" alt="Branch Image"/>
                                 </td>
-                                <td>{{ $cabang->quantity }}</td>
-                                <td>{{ $cabang->cabangshelf->code }}-{{ $cabang->cabangshelf->name }}</td>
+                                <td>{{ $toko->quantity }}</td>
+                                <td>{{ $toko->tokoshelf->code }}-{{ $toko->tokoshelf->name }}</td>
                                 <x-primary-button tag="a" href="{{
-                                    route('cabang.edit', $cabang->id)}}">Edit</x-primary-button>
+                                    route('toko.edit', $toko->id)}}">Edit</x-primary-button>
                             </td>
                         </tr>
                         @endforeach

@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CabangController;
+use App\Http\Controllers\TokoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +23,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/cabang',[CabangController::class, 'index']) 
+Route::get('/cabang',[TokoController::class, 'index']) 
 
 ->middleware(['auth', 'verified'])->name('cabang');
 
@@ -31,12 +31,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/cabangs', [CabangController::class,'index'])->name('cabang');
-    Route::get('/cabang/create', [CabangController::class,'create'])->name('cabang.crate');
-    Route::post('/cabangs', [CabangController::class,'store'])->name('cabang.store');
-    Route::get('/cabang/{id}/edit', [CabangController::class,'edit'])->name('cabang.edit');
-    Route::match(['put', 'patch'], '/cabangs/{id}',
-    [CabangController::class, 'update'])->name('cabang.update');
+    Route::get('/tokos', [TokoController::class,'index'])->name('toko');
+    Route::get('/toko/create', [TokoController::class,'create'])->name('toko.crate');
+    Route::post('/tokos', [TokoController::class,'store'])->name('toko.store');
+    Route::get('/toko/{id}/edit', [TokoController::class,'edit'])->name('toko.edit');
+    Route::match(['put', 'patch'], '/tokos/{id}',
+    [TokoController::class, 'update'])->name('toko.update');
 
 });
 
