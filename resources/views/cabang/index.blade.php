@@ -37,7 +37,6 @@
                                 <td>{{ $cabang->nama_cabang }}</td>
                                 <td>{{ $cabang->alamat }}</td>
                                 <td>{{ $cabang->telepon }}</td>
-                                <td>{{ $cabang->pegawai }}</td>
                                 <td>{{ $cabang->created_at }}</td>
                                 <td>{{ $cabang->updated_at }}</td>
                                 <td>
