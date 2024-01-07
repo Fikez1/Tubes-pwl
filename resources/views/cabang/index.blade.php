@@ -50,7 +50,6 @@
                         </tr>
                         @endforeach
                     </x-table>
-                    <!-- AKHIR KONTEN -->
                 </div>
             </div>
         </div>
